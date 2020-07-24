@@ -5,12 +5,16 @@
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
-        "test": "./node_modules/.bin/jasmine-node spec"
+        "test-init": "./node_modules/.bin/jasmine init",
+        "test": "./node_modules/.bin/jasmine --reporter=jasmine-ts-console-reporter"
     },
     "author": "Rishabh Garg",
     "dependencies": {
         "express": "^4.17.1",
-        "jasmine-node": "^3.0.0",
         "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "jasmine": "^3.6.0",
+        "jasmine-ts-console-reporter": "^3.1.1"
     }
 }
