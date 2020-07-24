@@ -1,0 +1,16 @@
+{
+    "name": "nodejs_using_jenkins",
+    "version": "0.0.1",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "./node_modules/.bin/jasmine-node spec"
+    },
+    "author": "Rishabh Garg",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jasmine-node": "^3.0.0",
+        "request": "^2.88.2"
+    }
+}
