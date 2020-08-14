@@ -1,8 +1,6 @@
-pipeline {
-  agent any
+node {
   def app
-  tools {nodejs "node-latest"}
- 
+
   stages {
     stage('Install dependencies') {
       steps {
@@ -14,11 +12,12 @@ pipeline {
          sh 'npm test'
       }
     } 
+
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("node-devops-nagp-pipeline")
+        app = docker.build("getintodevops/hellonode")
     }
 
     stage('Test image') {
@@ -40,5 +39,4 @@ pipeline {
             app.push("latest")
         }
     }
-  }
 }
